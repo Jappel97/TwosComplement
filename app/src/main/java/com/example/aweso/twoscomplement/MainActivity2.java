@@ -36,10 +36,13 @@ public class MainActivity2 extends AppCompatActivity
     private String addOne(String bin)
     {
         //will return a new String that is the given String with 1 added to it
+        //the initial adding one can be thought of as a carry from the naught position
         boolean carry = true;
         char[] binArr = bin.toCharArray();
+        //itterate through the string backwards
         for(int i = bin.length()-1; i >= 0; i--)
         {
+            //if there's a carry, then we can add one to the current position. otherwise, nothing is going to change
             if(carry)
             {
                 carry = false;
